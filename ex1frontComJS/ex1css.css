@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    background-color: #f5f5f5;
+}
+
+.container {
+    background-color: #31855b; 
+    background-image: url("zapzap.jpg");
+    border-radius: 5px;
+    border: 2px solid;
+    margin: 0 auto;
+    width: 900px;
+}
+
+.chat-area {
+    padding: 15px;
+    height: 400px;
+}
+
+.padrao {
+    margin-bottom: 15px;
+}
+
+.atendente {
+    align-self: flex-start;
+    background-color: #a0a097;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 500px;
+}
+
+.cliente {
+    align-self: flex-start;
+    background-color: #dcf8c6;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-left: 500px;
+}
+
+.input-area {
+    padding: 15px;
+    display: flex;
+    background-color: rgba(138, 137, 137, 0.25);
+}
+
+.input-area input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #222722;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.input-area button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color, transform 0.5s;
+}
+
+.input-area button:hover {
+    background-color: #235026;
+    transform: scale(1.05);
+}
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: auto;
+    }
+
+    .chat-area {
+        height: 300px;
+    }
+
+    .atendente {
+        margin-right: 15px;
+    }
+
+    .cliente {
+        margin-left: 15px;
+    }
+
+    .input-area {
+        flex-direction: column;
+    }
+
+    .input-area input {
+        margin-bottom: 15px;
+    }
+
+    .input-area button {
+        margin-left: 0;
+    }
+}

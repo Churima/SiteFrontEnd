@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whatsapp</title>
+    <link rel="stylesheet" href="ex1css.css">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-area">
+            <div class="padrao cliente">
+                <p style="text-align: right;"><b>Você</b></p>
+                <p>Olá gostaria de fazer uma consulta</p>
+            </div>
+            <div class="padrao atendente">
+                <p><b>Atendente</b></p>
+                <p>Olá, qual horário você tem preferência?</p>
+            </div>
+            <div class="padrao cliente">
+                <p style="text-align: right;"><b>Você</b></p>
+                <p>Durante a manhã seria bom para mim</p>
+            </div>
+        </div>
+        <div class="input-area">
+            <input type="text" id="digita" placeholder="Digite sua mensagem...">
+            <button id="botao">Enviar</button>
+        </div>
+    </div>
+    <script>
+        const sendButton = document.querySelector('#botao');
+      
+        sendButton.addEventListener('click', () => {
+
+          const messageInput = document.querySelector('#digita');
+       
+          const message = document.createElement('div');
+          message.classList.add('padrao', 'cliente');
+         
+          const messageText = document.createElement('p');
+          messageText.style.textAlign = 'left';
+          messageText.textContent = messageInput.value;
+      
+          message.appendChild(messageText);
+      
+          const chatArea = document.querySelector('.chat-area');
+          chatArea.appendChild(message);
+      
+          messageInput.value = '';
+        });
+      </script>
+</body>
+</html>
